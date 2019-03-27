@@ -1,21 +1,89 @@
 // Colors
-$colorMap:(
-    fontGold: #fde577,
-    fontLight: #fdfdfd,
-    bgLight: #fdfdfd,
-    bgDark: #161616
-);
+$colorMap:(fontGold: #ffd900,
+fontLight: #fdfdfd,
+bgLight: #fdfdfd,
+bgDark: #161616);
 
-*{
+* {
+    text-decoration: none;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
 
+.header--flex__container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 5px 20px 5px;
+    letter-spacing: 5px;
+    background-color: map-get($colorMap, bgDark);
+    border-bottom: #ffd900 solid 2.5px;
+
+    .header--logo {
+        margin-right: 65px;
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 2.5px;
+        color: map-get($colorMap, fontGold)
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .li--1 {
+        margin-top: 10px;
+    }
+
+    div {
+        margin: 0px 15px 0px 15px;
+        color: map-get($colorMap, fontLight);
+    }
+}
+
+.header--btn {
+    color: map-get($colorMap, fontLight);
+    border: #fdfdfd solid 1px;
+    padding: 8px;
+    transition: 0.2s;
+}
+
+.header--btn:hover {
+    border: #c2a816 solid 1px;
+    color: map-get($colorMap, fontGold);
+}
+
+.image--container{
+    background-image: url(../Images/Girl-3.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.s1--flex__container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 100px;
+    h1{
+        color: map-get($colorMap, fontLight);
+        font-family: 'Merriweather', serif;
+        font-size: 5rem;
+    }
+    p{
+        color: map-get($colorMap, fontLight);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
 // Breakpoints
-$breakpoints: (
-  small: 767px,
-  medium: 992px,
-  large: 1200px
-);
+$breakpoints: (small: 767px,
+medium: 992px,
+large: 1200px);
